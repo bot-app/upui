@@ -1,0 +1,12 @@
+---
+version: '3.8'
+services:
+  upui:
+    build:
+      context: .
+      dockerfile: "./Dockerfile"
+    image: upui
+    # image: uptradingorg/upui:main
+    restart: unless-stopped
+    ports:
+      - "3000:80"
